@@ -1,35 +1,38 @@
 
-		function review_nouns() {
-					
+		function review_nouns() {		
 			
-			// Getting the id for the noun image
-			var noun_image = document.getElementById("noun_image");
-			var next_image = document.getElementById("next_image");
-			var noun_name = document.getElementById("noun_name");
-			var noun_translation = document.getElementById("noun_translation");
-			var count = document.getElementById("count");
+			$(function(){
+				
+			$("#noun_image").attr("src", test_nouns[x].pic);				
+	
+			$("#next_image").attr("src", test_nouns[x + 1].pic);
+			
+			$("#noun_name").html( test_nouns[x].gender + ' ' + test_nouns[x].name );
+			
+			$("#noun_translation").html( "(The " + test_nouns[x].translation + ")" );
+			
+			$("#count").html( (x + 1) + " of 3" ); // Displaying the noun count
 
-			noun_image.src = test_nouns[x].pic;
-			next_image.src = test_nouns[x + 1].pic;
-			noun_name.innerHTML = test_nouns[x].gender + ' ' + test_nouns[x].name;
-			noun_translation.innerHTML = "(The " + test_nouns[x].translation + ")";
-			
-			count.innerHTML = (x + 1) + " of 3"; // Displaying the noun count
-			
 			audio_play();
 			
 			x++;
 			
 			if (x >= 3) x = 0;
-			
+
+			});
+						
 		}
 		
 		function audio_play() {
-
-			var audio_link = document.getElementById("audio_link");	
 			
-			// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
-			audio_link.src = "http://translate.google.com/translate_tts?tl=de&q=" + noun_name.innerHTML.replace(/\s/g,"%20");
+			$(function(){
+
+				// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
+				
+				$("#audio_link").attr("src", "http://translate.google.com/translate_tts?tl=de&q=" 
+					+ $("#noun_name").html().replace(/\s/g,"%20") );			
+		
+			});
 			
 		}
 		

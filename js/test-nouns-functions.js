@@ -24,11 +24,15 @@
 		}
 		
 		function audio_play() {
-
-			var audio_link = document.getElementById("audio_link");	
 			
-			// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
-			audio_link.src = "http://translate.google.com/translate_tts?tl=de&q=" + noun_name.innerHTML.replace(/\s/g,"%20");
+			$(function(){
+
+				// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
+				
+				$("#audio_link").attr("src", "http://translate.google.com/translate_tts?tl=de&q=" 
+					+ $("#noun_name").html().replace(/\s/g,"%20") );			
+		
+			});
 			
 		}
 		
