@@ -316,6 +316,13 @@ var data = {
 		"translation": "boat",
 		"pic": "../images/nouns/travel/boot.jpg"
 	},
+        {
+                "category": "travel",
+                "name": "Br&uuml;cke",
+                "gender": "Die",
+                "translation": "bridge",
+                "pic": "../images/nouns/travel/bridge.jpg"
+        },
 	{
 		"category": "travel",
 		"name": "Bus",
@@ -350,6 +357,13 @@ var data = {
 		"gender": "Der",
 		"translation": "flight",
 		"pic": "../images/nouns/travel/flug.jpg"
+	},
+	{
+		"category": "travel",
+		"name": "Flughafen",
+		"gender": "Der",
+		"translation": "airport",
+		"pic": "../images/nouns/travel/flughafen.jpg"
 	},
 	{
 		"category": "travel",
