@@ -3,7 +3,7 @@
 			
 			$(function(){
 				
-			$("#noun_image").attr("src", test_nouns[x].pic);				
+			$( document.getElementById("noun_image") ).attr("src", test_nouns[x].pic);				
 	
 			$("#next_image").attr("src", test_nouns[x + 1].pic);
 			
@@ -38,22 +38,19 @@
 		
 		function take_test() { 
 			
-			var img_space = document.getElementById("img_space");
-		    var test_space = document.getElementById("test_space");
-		    	
-		    // Let's hide the images and display the test	
-			img_space.style.display = "none";
-			test_space.style.display = "block";
-			
-			// Here's where we populate the questions			
+			$(function(){
 
-			var question_one = document.getElementById("question_one");
-			var question_two = document.getElementById("question_two");
-			var question_three = document.getElementById("question_three");
+			// Let's hide the images and display the test	
+		    $("#img_space").css("display", "none");
+		    $("#test_space").css("display", "block");
+		    			
+			// Here's where we populate the questions			
 									
-			question_one.innerHTML = test_nouns[0].name;
-			question_two.innerHTML = test_nouns[1].name;
-			question_three.innerHTML = test_nouns[2].name;
+			$("#question_one").html( test_nouns[0].name );
+			$("#question_two").html( test_nouns[1].name );
+			$("#question_three").html( test_nouns[2].name );
+			
+			});
 			
 		}
 		
