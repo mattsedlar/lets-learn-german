@@ -16,41 +16,51 @@
 		
 		<script src="../js/nouns.js"></script>
 		<script src="../js/nouns-functions.js"></script>		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script>
-		
+
 		// Let's create our array
-		
+
 		var test_nouns = new Array();
-		
+
 		// and dump our nouns into the array
-		
+
 		for (var i in data.nouns) {
-			
+
 			if (data.nouns[i].category == "clothing") {
-				
+
 			test_nouns[i] = data.nouns[i];	
-			
+
 			}
-			
+
 		}
-		
+
 		// Let's scramble the array so the user doesn't get the same experience twice
-		
+
 		test_nouns.sort(function() {return 0.75 - Math.random()});
 
 		// Let's set a variable for cycling through the images in review_me function
-		
+
 		var x = 0;
-		
+
 		// Let's count the number of correct answers
+
 		var correct_answers = 0;
-	
+
+		// Let's speed up the process of loading everything by doing it with jQuery
+
+		$(document).ready(function(){
+
+		review_nouns();
+
+		});
+
 		</script>
 		
 	</head>
 	
-	<body onload="review_nouns();">
+	<body>
 	<?php include_once("../includes/analyticstracking.php") ?>		
 
 		

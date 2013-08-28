@@ -15,6 +15,7 @@
 		
 		<script src="../js/nouns.js"></script>
 		<script src="../js/nouns-functions.js"></script>		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script>
 		
@@ -44,12 +45,21 @@
 
 		// Let's count the number of correct answers
 		var correct_answers = 0;
+
+		// Let's speed up the process of loading everything by doing it with jQuery
+
+		$(document).ready(function(){
+
+		review_nouns();
+
+		});
+
 	
 		</script>
 		
 	</head>
 	
-	<body onload="review_nouns();">
+	<body>
 		
 	<?php include_once("../includes/analyticstracking.php") ?>
 		

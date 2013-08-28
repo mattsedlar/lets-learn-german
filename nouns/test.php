@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 
+
 <html>
 
 	<head>
 	
-		<title>Let's Learn German Together - Animals</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-		<?php include ('../includes/meta.php'); ?>
-
+		<title>Let's Learn German Together - Travel</title>
 	
 		<link rel="stylesheet" type="text/css" href="../styles.css">
+		
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
+		<?php include ('../includes/meta.php'); ?>
+		
 		<script src="../js/nouns.js"></script>
-		<script src="../js/nouns-functions.js"></script>		
-
+		<script src="../js/test-nouns-functions.js"></script>		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script>
 
-		// Let's create our array
+                // Let's create our array
 
-		var test_nouns = new Array();
+                var test_nouns = new Array();
 
-		// and dump our nouns into the array
+                // and dump our nouns into the array
 
-		for (var i in data.nouns) {
+                for (var i in data.nouns) {
 
-			if (data.nouns[i].category == "animals") {
+                        if (data.nouns[i].category == "travel") {
 
-			test_nouns[i] = data.nouns[i];	
+                        test_nouns[i] = data.nouns[i];
 
-			}
+                        }
 
-		}
+                }
 
-		// Let's scramble the array so the user doesn't get the same experience twice
+                // Let's scramble the array so the user doesn't get the same experience twice
 
-		test_nouns.sort(function() {return 0.75 - Math.random()});
+                test_nouns.sort(function() {return 0.75 - Math.random()});
 
-		// Let's set a variable for cycling through the images in review_me function
+                // Let's set a variable for cycling through the images in review_me function
 
-		var x = 0;
+                var x = 0;
 
-		// Let's count the number of correct answers
+                // Let's count the number of correct answers
+                var correct_answers = 0;
 
-		var correct_answers = 0;
-
-		// Let's speed up the process of loading everything by doing it with jQuery
-
-		$(document).ready(function(){
-
+		$(document).ready(function() {
+		
 		review_nouns();
 
 		});
-
-		</script>		
+	
+		</script>
 		
 	</head>
 	
 	<body>
-			<?php include_once("../includes/analyticstracking.php") ?>	
-
+		
+	<?php include_once("../includes/analyticstracking.php") ?>
 		
 		<div class="app_window">
 	
 			<p class="app_title"><a href="../index.php">Let's Learn German Together!</a></p>
 			
-			<p class="sec_title">Nouns - Animals</p>
+			<p class="sec_title">Nouns - Travel</p>
 			
 				<div id="img_space">
 					
@@ -82,6 +79,7 @@
 						
 						<img id="noun_image" src=""/> 
 						<img id="next_image" src="" style="display:none;"/>
+						
 						<br/>
 					
 						<span id="noun_name"></span>
@@ -90,12 +88,12 @@
 					
 						<span id="noun_translation"></span>
 					
-					</p>	
-					
-					<iframe id="audio_link" src=""></iframe>
-					
-					<br/>				
-					
+					</p>
+
+					<iframe id="audio_link" src=""></iframe>		
+				
+				    <br/>
+				
 					<button class="button" onclick="review_nouns()">Next</button>
 					
 					<p>&nbsp;</p>
@@ -106,7 +104,7 @@
 				<div id="test_space">
 					
 					<div class="question_side">
-						
+
 						<div class="q_content">
 
 							<div class="question">1.&nbsp;
@@ -140,7 +138,7 @@
 					<div class="answer_side">
 					
 						<div class="a_content">
-					
+
 								<div class="answer">
 									<p id="question_one"></p>
 								</div>
@@ -151,22 +149,23 @@
 							
 								<div class="answer">
 									<p id="question_three"></p>
-								</div>								
-
-						</div>
+								</div>
 						
+						</div>
+								
+
 					</div>
 					
 					<p>&nbsp;</p>
-					<button class="button" id="score_button" onclick="check_answers();">Check Answers</button>
+					<button class="button" id="score_button" onclick="check_answers();">Check</button>
 					<p id="score"></p>
 					<p id="replay"><a href="">Try Again</a> | <a href="../index.php">Home</a></p>
-									
+				
 				</div>
 			
 			</div>
 			
-	<?php include ('../includes/footer.php'); ?>
+				<?php include ('../includes/footer.php'); ?>
 					
 	</body>
 	
