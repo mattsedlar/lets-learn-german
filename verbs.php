@@ -48,6 +48,8 @@
 
 
 			"danken" => "to thank",
+			
+			"gehen" => "to go",
 
 			"haben" => "to have",
 
