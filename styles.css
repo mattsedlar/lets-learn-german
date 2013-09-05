@@ -58,7 +58,10 @@
                 background-color: #fff;
                 padding: 6px;
                 line-height: 40px;
+         }
 
+	     .sec_lessons a:hover {
+                background-color: #E8D4D1;
          }
 	
                .sec_title_hp {
