@@ -51,7 +51,16 @@
 			letter-spacing: -1px;	
 		
 		}	
+		
+	     .sec_lessons a {
+                border: 2px solid #CCCCCC;
+                border-radius: 6px;
+                background-color: #fff;
+                padding: 6px;
+                line-height: 40px;
 
+         }
+	
                .sec_title_hp {
 
                         line-height: 26px;

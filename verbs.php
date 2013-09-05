@@ -109,7 +109,7 @@
 
 
 
-			else { echo "&#8226; "; }
+			else { echo "&nbsp; "; }
 
 
 

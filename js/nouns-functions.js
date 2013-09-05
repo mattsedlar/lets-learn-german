@@ -76,6 +76,7 @@
 			// This is the paragraph where the score messages will be printed
 
 			var score = document.getElementById("score");
+			var stars = document.getElementById("stars");
 			
 			// A for loop to compare the answer array and the noun array
 			
@@ -84,6 +85,7 @@
 				if (answer_options[y] == test_nouns[y].gender) {
 					
 					correct_answers++;
+					stars.innerHTML += "<img src='images/nouns/star.png' />";
 
 				}
 				
@@ -96,7 +98,6 @@
 			
 			}
 			
-			score.innerHTML += "You got " + correct_answers + " out of 3 correct.";
 			var score_button = document.getElementById("score_button");
 			var replay = document.getElementById("replay");
 			

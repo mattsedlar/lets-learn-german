@@ -132,16 +132,20 @@
 			
 			
 		}
+		                
+ 		function audio_play() {
+			
+			$(function(){
+
+				// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
+				
+				$("#audio_link").attr("src", "http://translate.google.com/translate_tts?tl=de&q=" 
+					+ columnA[0].firstElementChild.innerHTML.substring(0,3)
+					+ "%20" +  $("#answer_here").html() + "%20" 
+					+ columnC[0].firstElementChild.innerHTML );			
 		
-	
-                function audio_play() {
-
-                        var audio_link = document.getElementById("audio_link");
-
-                        // The audio url is pulled from innerHTML to avoid problems with non-ASCII characters
-                        audio_link.src = "http://translate.google.com/translate_tts?tl=de&q=" + columnA[0].firstElementChild.innerHTML.substring(0,3)
-					 + "%20" + correct_answer.innerHTML + "%20" + columnC[0].firstElementChild.innerHTML;
-
-                }
+			});
+			
+		}               
 			
 		
