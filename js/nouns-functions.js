@@ -1,4 +1,6 @@
 
+		var image_array = [];
+
 		function review_nouns() {		
 			
 			$(function(){
@@ -55,7 +57,9 @@
 		}
 		
 		function check_answers() {
-			
+
+			$(function(){
+							
 			// Here we're getting the selected answers and placing them in an array
 						
 			var answer_one = document.getElementById("answer_one").selectedIndex;
@@ -77,31 +81,35 @@
 
 			var score = document.getElementById("score");
 			var stars = document.getElementById("stars");
+			var star_image;
 			
 			// A for loop to compare the answer array and the noun array
 			
 			for(var y=0; y<answer_options.length; y++) {
+					
+				star_image = "#star" + y;
 							
 				if (answer_options[y] == test_nouns[y].gender) {
 					
 					correct_answers++;
-					stars.innerHTML += "<img src='images/nouns/star.png' />";
-
+					stars.innerHTML += "<img id='star" + y + "' src='images/nouns/star.png' />";
+					image_array.push(star_image);
+					
 				}
 				
 				else { 
 					
 					score.innerHTML += (y + 1) + " is not correct. The correct answer is '"
 						+ test_nouns[y].gender + " " + test_nouns[y].name + ".'<br/>";									
-										
+					$(score).css("color", "red");					
 				}
 			
 			}
 			
-			var score_button = document.getElementById("score_button");
-			var replay = document.getElementById("replay");
+			for(var x = 0; x < image_array.length; x++) { $(image_array[x].fadeIn("slow"); }
 			
-			score_button.style.display = "none";
-			replay.style.display = "block";
+			$(document.getElementById("score_button")).css("display", "none");
+			$(document.getElementById("replay")).css("display", "block");
 			
+			});
 		}
