@@ -92,7 +92,7 @@
 				if (answer_options[y] == test_nouns[y].gender) {
 					
 					correct_answers++;
-					stars.innerHTML += "<img id='star" + y + "' src='images/nouns/star.png' />";
+					stars.innerHTML += "<img id='star" + y + "' src='../images/nouns/star.png' style='display:none' />";
 					image_array.push(star_image);
 					
 				}
@@ -106,7 +106,7 @@
 			
 			}
 			
-			for(var x = 0; x < image_array.length; x++) { $(image_array[x].fadeIn("slow"); }
+			for(var x = 0; x < image_array.length; x++) { $(image_array[x]).fadeIn("slow"); }
 			
 			$(document.getElementById("score_button")).css("display", "none");
 			$(document.getElementById("replay")).css("display", "block");

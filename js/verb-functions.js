@@ -104,6 +104,8 @@
 		}	
 		
 		function check_answers() {
+
+			$(function(){
 			
 			// This is the paragraph where the score messages will be printed
 
@@ -111,7 +113,7 @@
 			
 			if (correct_answer.innerHTML == columnB[0].firstElementChild.innerHTML) {
 				
-				score.innerHTML = "Correct!";
+				$(score).html("Correct!");
 				audio_play();
 				
 			}
@@ -121,16 +123,14 @@
 				score.innerHTML = "Incorrect. The correct conjugation is<br/>'"
 					+ columnA[0].firstElementChild.innerHTML + " " + correct_answer.innerHTML
 					+ " " + columnC[0].firstElementChild.innerHTML + "'";
+				$(score).css("color", "red");
 				
 			}
 			
-			var score_button = document.getElementById("score_button");
-			var replay = document.getElementById("replay");
-			
-			score_button.style.display = "none";
-			replay.style.display = "block";
-			
-			
+			$(document.getElementById("score_button")).css("display", "none");
+			$(document.getElementById("replay")).css("display", "block");
+
+			});
 		}
 		                
  		function audio_play() {
