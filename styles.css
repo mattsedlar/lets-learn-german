@@ -343,4 +343,49 @@
 	width: 80px;
 	
 	}		
+	
+	/* Styles associated with the color adjectives page */
+	
+    div.color-block {
+     
+      height:125px;
+      width: 150px;
+      float: left;
+      margin-right: 12px;
+      border: 1px solid #CCCCCC;
+      box-shadow: 5px 5px 10px #888888;
+     
+    }
+    
+    .pick-block {
+      
+      width: 150px;
+      height: 100px;
+      float: left;
+      margin-right: 12px;
+      color: #000000; 
+			font-weight: 700;
+			font-size: 18px;      
+      
+    }
+    
+    div.color-block p { 
+      color: #FFFFFF; 
+			font-weight: 700;
+			font-size: 18px;
+			text-shadow: 0.1em 0.1em 0.1em #000000;
+    }
+    
+    /*THIS SEEMS LIKE A SHITTY WORKAROUND*/
+    #color1 {
+      margin-left:237px;
+    }
+
+    #color_name1 {
+      margin-left:237px;
+    }    
+    
+    #colors { height: 170px; }
+    
+	
 			
