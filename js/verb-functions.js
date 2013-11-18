@@ -120,10 +120,9 @@
 			
 			else {
 				
-				score.innerHTML = "Incorrect. The correct conjugation is<br/>'"
+				$(score).html("Incorrect. The correct conjugation is<br/>'"
 					+ columnA[0].firstElementChild.innerHTML + " " + correct_answer.innerHTML
-					+ " " + columnC[0].firstElementChild.innerHTML + "'";
-				$(score).css("color", "red");
+					+ " " + columnC[0].firstElementChild.innerHTML + "'").css("color", "red");
 				
 			}
 			

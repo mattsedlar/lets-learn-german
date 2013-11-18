@@ -18,18 +18,25 @@
 		<script>
 		
 		  var image_array = [];
-		      
+		  var pick_answers = [];
+		  var colors_q = [];
+		  var color_picked;
+
 		      $(document).ready(function() {
 		        
 		        // Let's scramble the array so the user doesn't get the same experience twice
 
         		colors.sort(function() {return 0.75 - Math.random()});
+	          colors_q = colors.slice(0,3);
+	          colors_q.sort(function() {return 0.75 - Math.random()});        		
         		
         		// Let's color the divs
 		        
 		        $(document.getElementById("color1")).css("background-color", colors[0][2]);
 		        $(document.getElementById("color2")).css("background-color", colors[1][2]);
    	        $(document.getElementById("color3")).css("background-color", colors[2][2]);
+   	        
+   	        // And name them
    	        
    	        $(document.getElementById("color1")).children("p").html(
    	          colors[0][0] + "<br/>(" + colors[0][1] + ")");
@@ -44,18 +51,54 @@
 		          $(document.getElementById("test_space")).css("display","block");
 		          $(document.getElementById("img_space")).css("display","none");
 		          
-		          $(document.getElementById("color_name1")).children("p").html(
-		            colors[0][0] + "<br/><br/><input type='color' id='pick_name1'>");
-		          $(document.getElementById("color_name2")).children("p").html(
-		            colors[1][0] + "<br/><br/><input type='color' id='pick_name2'>");
-		          $(document.getElementById("color_name3")).children("p").html(
-		            colors[2][0] + "<br/><br/><input type='color' id='pick_name3'>");		          
+		          // Naming the choices
+		          
+	   	        $(document.getElementById("color1_ans")).children("p").html(
+   	          colors_q[0][0]);
+     	        $(document.getElementById("color2_ans")).children("p").html(
+   	          colors_q[1][0]);
+     	        $(document.getElementById("color3_ans")).children("p").html(
+   	          colors_q[2][0]);
+   	          
+   	          // To vary the color picks, let's clone the array and scramble it
+   	          var colors_clone = colors.slice(0);
+          		colors_clone.sort(function() {return 0.75 - Math.random()});
+
+		          for(var y = 0; y < colors.length; y++) {
+		            
+		            $(document.getElementById("color_choices")).append("<img id='choice" + y
+		              + "' onclick='store_color(\"choice" 
+		              + y + "\");' onMouseOver=\"this.style.opacity='0.5' \" "
+		              + "onMouseOut=\"this.style.opacity='1' \""
+		              + "style='width:50px; height: 50px; background-color: " 
+		              + colors_clone[y][2] + "'/>");
+		            
+		          }
+		         	          
 		        }
+		        
+		        // Function to store color user picked
+		        function store_color(x) { 
+		          
+		         color_picked = document.getElementById(x).style.getPropertyValue('background-color'); 
+		          
+		        }
+		          
+		        // Function to drop color in choices  
+	          function drop_color(x) {
+
+              $(document.getElementById(x)).css("background-color", color_picked);
+  
+		        }
+		        
 		        
 		        function check_answers() {
 		          
-		          var pick_answers = [pick_name1.value, pick_name2.value, pick_name3.value];
-
+		          pick_answers.push(color1_ans.style.getPropertyValue("background-color")); 
+		          pick_answers.push(color2_ans.style.getPropertyValue("background-color"));
+			        pick_answers.push(color3_ans.style.getPropertyValue("background-color"));
+			        
+			          
         			// This is the paragraph where the score messages will be printed
         
         			var score = document.getElementById("score");
@@ -66,7 +109,7 @@
 		            
 		            star_image = "#star" + i;
 		            				
-		            if (pick_answers[i] == colors[i][2]) {
+		            if (pick_answers[i] == colors_q[i][2]) {
 
       					stars.innerHTML += "<img id='star" + i + 
       					  "' src='../images/nouns/star.png' style='display:none' />";
@@ -123,16 +166,17 @@
 				
 				<div id="test_space">
 				
-				<p>Use the color pickers to enter the correct color name.</p>
+				<p>Click on the color in the boxes below, then click in the box you believe it matches.</p>
 					
-					<div id="color_name1" class="pick-block"><p></p></div>
-					<div id="color_name2" class="pick-block"><p></p></div>
-					<div id="color_name3" class="pick-block"><p></p></div>
+					<div id="colors_ans">
+					  <div id="color1_ans" onclick="drop_color('color1_ans');" class="color-block"><p></p></div>
+					  <div id="color2_ans" onclick="drop_color('color2_ans');" class="color-block"><p></p></div>
+					  <div id="color3_ans" onclick="drop_color('color3_ans');" class="color-block"><p></p></div>
+					</div>
 					
-					<p>&nbsp;</p>					
-					<p>&nbsp;</p>	
-					<p>&nbsp;</p>					
-					<p>&nbsp;</p>						
+					<div id="color_choices"></div>
+					
+					<p>&nbsp;</p>
 					
 					<button class="button" id="score_button" onclick="check_answers();">Check Answers</button>
 					<p id="stars"></p> 

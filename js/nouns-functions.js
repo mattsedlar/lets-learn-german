@@ -71,7 +71,7 @@
 			var answer_three = document.getElementById("answer_three").selectedIndex;
 			var answer_three_option = document.getElementsByTagName("option")[answer_three].value;	
 			
-			var answer_options = new Array();
+			var answer_options = [];
 			
 			answer_options[0] = answer_one_option;
 			answer_options[1] = answer_two_option;

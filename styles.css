@@ -365,7 +365,7 @@
       margin-right: 12px;
       color: #000000; 
 			font-weight: 700;
-			font-size: 18px;      
+			font-size: 18px; 
       
     }
     
@@ -385,7 +385,18 @@
       margin-left:237px;
     }    
     
+    #color1_ans {
+      margin-left:237px;
+    }
+    
     #colors { height: 170px; }
     
-	
+    #colors_ans { 
+      
+      height: 170px; 
+      cursor: pointer;
+      
+      }
+      
+    #color_choices { cursor: pointer; }
 			
