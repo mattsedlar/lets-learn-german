@@ -77,18 +77,36 @@
 		         	          
 		        }
 		        
-		        // Function to store color user picked
-		        function store_color(x) { 
+		        // Function to select box for colors
+		        function pick_color_base(x) { 
 		          
-		         color_picked = document.getElementById(x).style.getPropertyValue('background-color'); 
+		         $(document.getElementById(x)).css("border", "1px solid #000000"); 
 		          
 		        }
 		          
 		        // Function to drop color in choices  
-	          function drop_color(x) {
+	          function store_color(x) {
 
-              $(document.getElementById(x)).css("background-color", color_picked);
-  
+    		        color_picked = document.getElementById(x).style.getPropertyValue('background-color'); 
+    
+                if (document.getElementById('color1_ans').style.getPropertyValue('border') == "1px solid rgb(0, 0, 0)") 
+                {
+                  $(document.getElementById('color1_ans')).css("background-color", color_picked);
+                  $(document.getElementById('color1_ans')).css("border", "1px solid #CCCCCC");
+                }
+    
+                if (document.getElementById('color2_ans').style.getPropertyValue('border') == "1px solid rgb(0, 0, 0)") 
+                {
+                  $(document.getElementById('color2_ans')).css("background-color", color_picked);
+                  $(document.getElementById('color2_ans')).css("border", "1px solid #CCCCCC");
+                }
+    
+                if (document.getElementById('color3_ans').style.getPropertyValue('border') == "1px solid rgb(0, 0, 0)") 
+                {
+                  $(document.getElementById('color3_ans')).css("background-color", color_picked);
+                  $(document.getElementById('color3_ans')).css("border", "1px solid #CCCCCC");
+                }
+
 		        }
 		        
 		        
@@ -166,12 +184,12 @@
 				
 				<div id="test_space">
 				
-				<p>Click on the color in the boxes below, then click in the box you believe it matches.</p>
+				<p>Select a box to fill and then the color.</p>
 					
 					<div id="colors_ans">
-					  <div id="color1_ans" onclick="drop_color('color1_ans');" class="color-block"><p></p></div>
-					  <div id="color2_ans" onclick="drop_color('color2_ans');" class="color-block"><p></p></div>
-					  <div id="color3_ans" onclick="drop_color('color3_ans');" class="color-block"><p></p></div>
+					  <div id="color1_ans" onclick="pick_color_base('color1_ans');" class="color-block"><p></p></div>
+					  <div id="color2_ans" onclick="pick_color_base('color2_ans');" class="color-block"><p></p></div>
+					  <div id="color3_ans" onclick="pick_color_base('color3_ans');" class="color-block"><p></p></div>
 					</div>
 					
 					<div id="color_choices"></div>
