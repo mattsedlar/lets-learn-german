@@ -13,7 +13,8 @@
 		
 		<script src="../js/verbs.js"></script>		
 		<script src="../js/verb-functions.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			
 		<script type="text/javascript">
 			
@@ -44,8 +45,7 @@
 		var columnD_answers = document.getElementsByClassName('columnD_answers');
 		var columnE_answers = document.getElementsByClassName('columnE_answers');	
 		var columnF_answers = document.getElementsByClassName('columnF_answers');	
-		
-		        	
+
 		</script>
 		
 	</head>

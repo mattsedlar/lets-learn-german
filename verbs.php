@@ -15,12 +15,10 @@
 		
 	<script>
 		  $(function() {
-    
     			$( document ).tooltip();
-  	
   			});
   	</script>
-		
+
 	</head>
 	
 	<body>
@@ -57,7 +55,7 @@
 
 
 			"danken" => "to thank",
-			
+
 			"gehen" => "to go",
 
 			"haben" => "to have",
@@ -106,9 +104,8 @@
 
 
 
-				echo "<a href='verbs/" . strtolower($verblink)	.  ".php'>" . $verb . "</a> <dfn>(" .
-
-					$trans . ")</dfn> ";
+				echo "<a href='verbs/" . strtolower($verblink)	.  ".php' title='"
+				. $trans . "' >" . $verb . "</a>";
 
 				$x++;
 

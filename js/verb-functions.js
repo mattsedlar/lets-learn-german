@@ -1,4 +1,3 @@
-
 		function review_verbs() {
 		
 				for (var i = 0; i < data.verbs.length; i++) {
@@ -28,7 +27,7 @@
 			
 			var img_space = document.getElementById("img_space");
 			var test_space = document.getElementById("test_space");
-				
+			
 			// Let's hide the images and display the test	
 			img_space.style.display = "none";
 			test_space.style.display = "block";
@@ -79,7 +78,7 @@
 			columnD_answers[0].firstElementChild.innerHTML = verb_conjug[3];												
 			columnE_answers[0].firstElementChild.innerHTML = verb_conjug[4];
 			columnF_answers[0].firstElementChild.innerHTML = verb_conjug[5];					
-			
+
 		}
 		
 		function allowDrop(ev)

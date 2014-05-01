@@ -316,12 +316,12 @@ var data = {
 		"translation": "boat",
 		"pic": "../images/nouns/travel/boot.jpg"
 	},
-        {
+       {
                 "category": "travel",
                 "name": "Br&uuml;cke",
                 "gender": "Die",
                 "translation": "bridge",
-                "pic": "../images/nouns/travel/bridge.jpg"
+                "pic": "../images/nouns/travel/brucke.jpg"
         },
 	{
 		"category": "travel",

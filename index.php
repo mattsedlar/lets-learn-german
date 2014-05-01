@@ -38,7 +38,7 @@
 					<p id="menu_text"><strong>Willkommen!</strong> My name is Matt, and I'm a web designer currently learning German. 
 					I put this site together as a way to help myself with some of the more tedious aspects of learning a new language. 
 					Now you can take advantage of my inability to grasp simple concepts. Let's learn German together!</p>
-					<p id="menu_text"><strong>UPDATE (8/19/2013):</strong> I'm on <a href="http://twitter.com/letslearngerman">Twitter</a>! Fixed some of the ugly German-English translations on the verbs pages.</p>
+
 					
 					<p class="sec_title_hp"><a href="nouns-adj.php">Nouns/Adjectives</a></p>
 				

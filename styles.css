@@ -1,402 +1,408 @@
 /* Main styles */
 
-		body, html { height: 100%; }
-		
-		.app_window { 
-		
-			width: 960px;
-			margin: 0 auto;
-			display: block;
-			border: 1px solid #ccc;
-			background-color: #FFEDE5;
-			
-			 }
+body, html { height: 100%; }
+
+.app_window { 
+
+width: 960px;
+margin: 0 auto;
+display: block;
+border: 1px solid #ccc;
+background-color: #FFEDE5;
+
+}
 /* I set the height shorter for the homepage */
-			 
-		.app_window_main { 
-		
-			width: 960px;
-			margin: 0 auto;
-			height: 575px;
-			display: block;
-			border: 1px solid #ccc;
-			background-color: #FFEDE5;
-			
-			 }			 
-		
-		.app_title { 
-		
-			line-height: 24px;
-			font-weight: 700;
-			font-family: HelveticaNeue-condensed, sans-serif;
-			text-align: center;
-			font-size: 40px;
-			text-rendering: optimizeLegibility;
-			color: #000;
-			text-transform: capitalize;
-			letter-spacing: -1px;
 
-		}
-		
-		.sec_title {
+.app_window_main { 
 
-			line-height: 26px;
-			font-weight: 700;
-			font-family: HelveticaNeue-condensed, sans-serif;
-			text-align: center;
-			font-size: 22px;
-			text-rendering: optimizeLegibility;
-			color: #000;
-			text-transform: capitalize;
-			letter-spacing: -1px;	
-		
-		}	
-		
-	     .sec_lessons a {
-                border: 2px solid #CCCCCC;
-                border-radius: 6px;
-                background-color: #fff;
-                padding: 6px;
-                line-height: 40px;
-         }
+width: 960px;
+margin: 0 auto;
+height: 575px;
+display: block;
+border: 1px solid #ccc;
+background-color: #FFEDE5;
 
-	     .sec_lessons a:hover {
-                background-color: #E8D4D1;
-         }
-	
-               .sec_title_hp {
+}			 
 
-                        line-height: 26px;
-                        font-weight: 700;
-                        font-family: HelveticaNeue-condensed, sans-serif;
-                        text-align: left;
-                        font-size: 22px;
-                        text-rendering: optimizeLegibility;
-                        color: #000;
-                        text-transform: capitalize;
-                        letter-spacing: -1px;
+.app_title { 
 
-                }
+line-height: 10px;
+font-family: 'Germania One', cursive;;
+text-align: center;
+font-size: 50px;
+text-rendering: optimizeLegibility;
+color: #000;
+text-transform: capitalize;
+letter-spacing: 1px;
 
-		
-		.sec_title_hp a {
+}
 
-		color:#000;
+.sec_title {
 
-		}		
+line-height: 26px;
+font-weight: 700;
+font-family: HelveticaNeue-condensed, sans-serif;
+text-align: center;
+font-size: 22px;
+text-rendering: optimizeLegibility;
+color: #000;
+text-transform: capitalize;
+letter-spacing: 0px;	
 
-		.sec_title_hp a:hover {
+}	
 
-		color:#808080;
+.sec_lessons a {
+border: 2px solid #CCCCCC;
+border-radius: 6px;
+background-color: #fff;
+padding: 6px;
+line-height: 40px;
 
-		}
-		
-		.button {
-		
-		width: 150px;
-		height: 25px;
-		background-color:#CCC;
-		color:#000;
-		font-size: 14px;
-		cursor: pointer;
-		
-		}
-				
-		p {
-		
-	    font-family: HelveticaNeue-condensed, sans-serif;	
-	    font-size: 15px;	
-		
-		}
-		
-		a { 
-		
-		text-decoration: none;
-		color: #808080;
-		font-weight: bold;
+}
 
-		
-		 }	
-		 
-		#menu { 
-		
-		text-align: left; 
-		float: right; 
-		width: 300px;
-		
-		}	
-		
-		#menu_image { float: left; }	
-		
-		#menu_space {
-		
-		text-align: center; 
-		margin: 0 auto; 
-		width: 800px
-		
-		} 
-		
-		#menu_text {
-		
-		font-size: 13px;
-		line-height: 18px;
-		
-		}
-		
-		.footer { 
+.sec_lessons a:hover {
+background-color: #E8D4D1;
+}
 
-               text-align: center;
-		margin: 0 auto;
-		font-family: Helvetica, sans-serif;
-		font-size: 12px;
-		padding-top:24px;
-		padding-bottom: 24px;
-		width: 962px;
-		 }
+.sec_title_hp {
 
-		.footer_left {
-		
-		text-align: left;
-		float:left;
+line-height: 26px;
+font-weight: 700;
+font-family: HelveticaNeue-condensed, sans-serif;
+text-align: left;
+font-size: 22px;
+text-rendering: optimizeLegibility;
+color: #000;
+text-transform: capitalize;
+letter-spacing: 0px;
 
-		}
-		 
+}
+
+
+.sec_title_hp a {
+
+color:#808080;
+border: 2px solid #CCCCCC;
+border-radius: 6px;
+background-color: #fff;
+padding: 6px;
+line-height: 40px;    
+
+}		
+
+.sec_title_hp a:hover {
+
+background-color: #E8D4D1;
+
+}
+
+.button {
+
+width: 150px;
+height: 25px;
+background-color:#CCC;
+color:#000;
+font-size: 14px;
+cursor: pointer;
+
+}
+
+p {
+
+font-family: HelveticaNeue-condensed, sans-serif;	
+font-size: 15px;	
+
+}
+
+a { 
+
+text-decoration: none;
+color: #808080;
+font-weight: bold;
+
+
+}	
+
+#menu { 
+
+text-align: left; 
+float: right; 
+width: 300px;
+
+}	
+
+#menu_image { float: left; }	
+
+#menu_space {
+
+text-align: center; 
+margin: 0 auto; 
+width: 800px
+
+} 
+
+#menu_text {
+
+font-size: 13px;
+line-height: 18px;
+
+}
+
+.footer { 
+
+text-align: center;
+margin: 0 auto;
+font-family: Helvetica, sans-serif;
+font-size: 12px;
+padding-top:24px;
+padding-bottom: 24px;
+width: 962px;
+}
+
+.footer_left {
+
+text-align: left;
+float:left;
+
+}
+
 /* Noun page styles */		 
-		
-		#img_space { 
 
-			text-align: center;
-			
-			}
+#img_space { 
 
-		.image {
-		
-		width: 430px;
-		margin: 0 auto;
-		background-color: white;
-		padding: 12px;
-		border: 1px solid #CCCCCC;
-		box-shadow: 5px 5px 10px #888888;
-			
-		}
-		
-		
-		#noun_image {
-		
-		border: 1px solid #CCCCCC;
-		
-		}
-			
-		#audio_link { display:none; }
-			
+text-align: center;
+
+}
+
+.image {
+
+width: 430px;
+margin: 0 auto;
+background-color: white;
+padding: 12px;
+border: 1px solid #CCCCCC;
+box-shadow: 5px 5px 10px #888888;
+
+}
+
+
+#noun_image {
+
+border: 1px solid #CCCCCC;
+
+}
+
+#audio_link { display:none; }
+
 /* Noun test styles */
-			
-		#test_space { 
-			
-			display: none;
-			text-align: center;
-			
-			}
-			
-			
-		.question_side { 
-			
-			float:left;
-			width: 480px;
-			
-			 }	 
-			 
-	    
-	    .q_content { 
-			
-			width: 240px; 
-			float: right;
-			text-align: right;
-			padding-right: 12px;
-			
-			}
-		
-		.question { 
-			
-			margin-top: 1em;
-			margin-bottom: 1em;
-			
-			}
-		
-		.answer_side { 
-			
-			float:right; 
-			width: 480px;
-			
-			}
-			
-	    
-	    .a_content { 
-			
-			width: 240px; 
-			float: left;
-			text-align: left;
-			padding-left: 12px;
-			padding-top: 3px;
-			
-			}	
-			
-		.answer { height: 26px; }	
-		
-		
-		#noun_name { 
-		
-			font-weight: bold; 
-			font-size: 14pt;
-			
-			}
-			
-		#replay {
-		
-		display: none;
-		
-		}
-		
+
+#test_space { 
+
+display: none;
+text-align: center;
+
+}
+
+
+.question_side { 
+
+float:left;
+width: 480px;
+
+}	 
+
+
+.q_content { 
+
+width: 240px; 
+float: right;
+text-align: right;
+padding-right: 12px;
+
+}
+
+.question { 
+
+margin-top: 1em;
+margin-bottom: 1em;
+
+}
+
+.answer_side { 
+
+float:right; 
+width: 480px;
+
+}
+
+
+.a_content { 
+
+width: 240px; 
+float: left;
+text-align: left;
+padding-left: 12px;
+padding-top: 3px;
+
+}	
+
+.answer { height: 26px; }	
+
+
+#noun_name { 
+
+font-weight: bold; 
+font-size: 14pt;
+
+}
+
+#replay {
+
+display: none;
+
+}
+
 /* Verb pages */
 
-		#verb_space { 
-		
-		text-align: center;
-		margin: 0 auto;
-		width: 200px;
-		height: 250px; 
-		
-		}
-		
-		#verb_space p {
+#verb_space { 
 
-	    font-family: HelveticaNeue-condensed, sans-serif;	
-	    font-size: 19px;	
-		
-		}
+text-align: center;
+margin: 0 auto;
+width: 200px;
+height: 250px; 
 
-		#verb_review_left { 
-		
-		float:left;
-		
-		}
+}
 
-		#verb_review_right { 
-		
-		float:right;
-		font-weight: bold;
-		
-		}
-		
-	/* Prevent the text contents of draggable elements from being selectable. */
-	[draggable] {
-		-moz-user-select: none;
-		-khtml-user-select: none;
-		-webkit-user-select: none;
-		user-select: none;
-		/* Required to make elements draggable in old WebKit */
-		-khtml-user-drag: element;
-		-webkit-user-drag: element;
-	}
+#verb_space p {
 
-	#columns {
-		text-align: center;
-		margin: 0 auto;
-		width: 408px;
-		font-weight: bold;
-		
-	}
-	
-	#columns_answers {
-		text-align: center;
-		margin: 0 auto;
-		width: 816px;
-		color: #331F1F;
-		
-	}	
+font-family: HelveticaNeue-condensed, sans-serif;	
+font-size: 19px;	
 
-	#column {
-		height: 60px;
-		width: 120px;
-		border: 2px solid #CCCCCC;
-		border-radius: 6px;
-		background-color: #fff;
-		margin-right: 12px;
-		float:left;
-		cursor: move;
-		-moz-user-select: none;
-		-khtml-user-select: none;
-		-webkit-user-select: none;		
-	}
-	
+}
 
-	#column header {
-	vertical-align:middle;
-	padding:20px;
-	font-family: HelveticaNeue-condensed, sans-serif;
-	font-size: 16px;
-	}
-	
-	.columnB header {
-	
-	height: 40px;
-	width: 80px;
-	
-	}		
-	
-	/* Styles associated with the color adjectives page */
-	
-    div.color-block {
-     
-      height:125px;
-      width: 150px;
-      float: left;
-      margin-right: 12px;
-      border: 1px solid #CCCCCC;
-      box-shadow: 5px 5px 10px #888888;
-     
-    }
-    
-    .pick-block {
-      
-      width: 150px;
-      height: 100px;
-      float: left;
-      margin-right: 12px;
-      color: #000000; 
-			font-weight: 700;
-			font-size: 18px; 
-      
-    }
-    
-    div.color-block p { 
-      color: #FFFFFF; 
-			font-weight: 700;
-			font-size: 18px;
-			text-shadow: 0.1em 0.1em 0.1em #000000;
-    }
-    
-    /*THIS SEEMS LIKE A SHITTY WORKAROUND*/
-    #color1 {
-      margin-left:237px;
-    }
+#verb_review_left { 
 
-    #color_name1 {
-      margin-left:237px;
-    }    
-    
-    #color1_ans {
-      margin-left:237px;
-    }
-    
-    #colors { height: 170px; }
-    
-    #colors_ans { 
-      
-      height: 170px; 
-      cursor: pointer;
-      
-      }
-      
-    #color_choices { cursor: pointer; }
-			
+float:left;
+
+}
+
+#verb_review_right { 
+
+float:right;
+font-weight: bold;
+
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+/* Required to make elements draggable in old WebKit */
+-khtml-user-drag: element;
+-webkit-user-drag: element;
+}
+
+#columns {
+text-align: center;
+margin: 0 auto;
+width: 408px;
+font-weight: bold;
+
+}
+
+#columns_answers {
+text-align: center;
+margin: 0 auto;
+width: 816px;
+color: #331F1F;
+
+}	
+
+#column {
+height: 60px;
+width: 120px;
+border: 2px solid #CCCCCC;
+border-radius: 6px;
+background-color: #fff;
+margin-right: 12px;
+float:left;
+cursor: move;
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;		
+}
+
+
+#column header {
+vertical-align:middle;
+padding:20px;
+font-family: HelveticaNeue-condensed, sans-serif;
+font-size: 16px;
+}
+
+.columnB header {
+
+height: 40px;
+width: 80px;
+
+}		
+
+/* Styles associated with the color adjectives page */
+
+div.color-block {
+
+height:125px;
+width: 150px;
+float: left;
+margin-right: 12px;
+border: 1px solid #CCCCCC;
+box-shadow: 5px 5px 10px #888888;
+
+}
+
+.pick-block {
+
+width: 150px;
+height: 100px;
+float: left;
+margin-right: 12px;
+color: #000000; 
+font-weight: 700;
+font-size: 18px; 
+
+}
+
+div.color-block p { 
+color: #FFFFFF; 
+font-weight: 700;
+font-size: 18px;
+text-shadow: 0.1em 0.1em 0.1em #000000;
+}
+
+/*THIS SEEMS LIKE A SHITTY WORKAROUND*/
+#color1 {
+margin-left:237px;
+}
+
+#color_name1 {
+margin-left:237px;
+}    
+
+#color1_ans {
+margin-left:237px;
+}
+
+#colors { height: 170px; }
+
+#colors_ans { 
+
+height: 170px; 
+cursor: pointer;
+
+}
+
+#color_choices { cursor: pointer; }
+
+

@@ -7,10 +7,9 @@
 	</div>
 
 	<div style="float:right;">
-
-        <a style="float:left;padding-right:3px;" target="blank" href="https://www.facebook.com/letslearngermantogether"><img src="http://letslearn-german.info/images/FB-f-Logo__blue_50.png"></a>
-        <a style="float:right;" target="_blank"  href="http://twitter.com/letslearngerman"><img src="http://letslearn-german.info/images/twitter-bird-white-on-blug.png"/></a>
 	
+	<a style="float:left;padding-right:3px;" target="blank" href="https://www.facebook.com/letslearngermantogether"><img src="http://letslearn-german.info/images/FB-f-Logo__blue_50.png"></a>
+	<a style="float:right;" target="_blank"  href="http://twitter.com/letslearngerman"><img src="http://letslearn-german.info/images/twitter-bird-white-on-blug.png"/></a>
 	</div>
 
 </div>

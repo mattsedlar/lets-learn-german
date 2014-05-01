@@ -1,11 +1,11 @@
+		var image_array = []; // This is used for the score in the check_answers function
 
-		var image_array = [];
-
-		function review_nouns() {		
+		function review_nouns() {
+					
 			
 			$(function(){
-				
-			$( document.getElementById("noun_image") ).attr("src", test_nouns[x].pic);				
+
+			$( document.getElementById("noun_image")).attr("src", test_nouns[x].pic);				
 	
 			$("#next_image").attr("src", test_nouns[x + 1].pic);
 			
@@ -21,8 +21,7 @@
 			
 			if (x >= 3) x = 0;
 
-			});
-						
+			});			
 		}
 		
 		function audio_play() {
@@ -31,20 +30,19 @@
 
 				// The audio url is pulled from noun_name's innerHTML to avoid problems with non-ASCII characters
 				
-				$("#audio_link").attr("src", "http://translate.google.com/translate_tts?tl=de&q=" 
-					+ $("#noun_name").html().replace(/\s/g,"%20") );			
+				$("#audio_link").attr("src", "http://translate.google.com/translate_tts?tl=de&q=" + $("#noun_name").html().replace(/\s/g,"%20") );			
 		
 			});
 			
-		}
-		
+		}		
+
 		function take_test() { 
 			
 			$(function(){
 
 			// Let's hide the images and display the test	
-		    $("#img_space").css("display", "none");
-		    $("#test_space").css("display", "block");
+		 	   $("#img_space").css("display", "none");
+		   	 $("#test_space").css("display", "block");
 		    			
 			// Here's where we populate the questions			
 									
@@ -82,34 +80,35 @@
 			var score = document.getElementById("score");
 			var stars = document.getElementById("stars");
 			var star_image;
-			
+
 			// A for loop to compare the answer array and the noun array
 			
 			for(var y=0; y<answer_options.length; y++) {
 					
 				star_image = "#star" + y;
-							
+		
 				if (answer_options[y] == test_nouns[y].gender) {
-					
+					                                 
 					correct_answers++;
-					stars.innerHTML += "<img id='star" + y + "' src='../images/nouns/star.png' style='display:none' />";
+					stars.innerHTML += "<img id='star" + y + "' src='../images/nouns/star.png' style='display:none;' />";
 					image_array.push(star_image);
-					
 				}
 				
 				else { 
 					
 					score.innerHTML += (y + 1) + " is not correct. The correct answer is '"
-						+ test_nouns[y].gender + " " + test_nouns[y].name + ".'<br/>";									
-					$(score).css("color", "red");					
+						+ test_nouns[y].gender + " " + test_nouns[y].name + ".'<br/>";
+					$(score).css("color", "red");									
+										
 				}
 			
 			}
 			
-			for(var x = 0; x < image_array.length; x++) { $(image_array[x]).fadeIn("slow"); }
-			
+			for (var x = 0; x < image_array.length; x++) { $(image_array[x]).fadeIn("slow"); }
+
 			$(document.getElementById("score_button")).css("display", "none");
 			$(document.getElementById("replay")).css("display", "block");
 			
 			});
 		}
+

@@ -53,9 +53,10 @@
 						
 							echo "<a href='nouns/" . strtolower($value) . ".php'>" . $value . " </a>";
 							$y++;
-							
+
 							if ($y == sizeof($nouns_nav)) { break; }
-							else { echo "&nbsp; "; }
+
+							else { echo "&nbsp; "; }							
 
 						}
 
@@ -65,7 +66,7 @@
 
 					<p class="sec_title">Adjectives</p>
 				
-					<p class="sec_lessons" id="verbs_lessons">Coming soon!</p>
+					<p class="sec_lessons"><a href="adjectives/colors.php">Colors</a></p>
 				
 					
 				</div>

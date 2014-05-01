@@ -53,7 +53,10 @@
 
 		review_nouns();
 
+
 		});
+
+
 
 		</script>		
 		
@@ -159,8 +162,9 @@
 					
 					<p>&nbsp;</p>
 					<button class="button" id="score_button" onclick="check_answers();">Check Answers</button>
-					<p id="stars"></p>
-					<p id="score"></p>
+					<p id="stars"> </p>
+					<p id="score"> </p>
+
 					<p id="replay"><a href="">Try Again</a> | <a href="../index.php">Home</a></p>
 									
 				</div>

@@ -162,6 +162,7 @@
 					
 					<p>&nbsp;</p>
 					<button id="score_button" class="button" onclick="check_answers();">Check Answers</button>
+					<p id="stars"></p>
 					<p id="score"></p>
 					<p id="replay"><a href="">Try Again</a> | <a href="../index.php">Home</a></p>
 									
