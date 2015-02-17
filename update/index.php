@@ -17,7 +17,7 @@
 
     <main>
         
-        <header><a href="">Let's Learn German Together</a></header>
+        <header>Let's Learn German Together</header>
         
         <section class="homepage_section">
             <p>Learn German the fun way with these interactive quizzes.</p>
@@ -25,7 +25,7 @@
             <nav>
                 <ul>
                     <li><a href="nouns.php">Nouns</a></li>
-                <li style="color:lightgrey">Verbs</li>    
+                <li>Verbs</li>    
                 </ul>
             </nav>
         </section>

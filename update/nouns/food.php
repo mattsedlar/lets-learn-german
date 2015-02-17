@@ -22,7 +22,7 @@
 
     <main>
         
-        <header><a href="/">Let's Learn German Together</a></header>
+        <header>Let's Learn German Together</header>
         
         <section>
             

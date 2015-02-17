@@ -22,11 +22,11 @@
 
     <main>
         
-        <header><a href="/">Let's Learn German Together</a></header>
+        <header>Let's Learn German Together</header>
         
         <section>
             
-            <h1 class="subhed">Nouns - Food</h1>
+            <h1 class="subhed">Nouns - Clothing</h1>
             
             <div class="review_space">
             
@@ -100,7 +100,7 @@
 
     <footer>
         <?php include ('../includes/footer.php'); ?>
-    </footer>    
+    </footer>
     
 </body>
 

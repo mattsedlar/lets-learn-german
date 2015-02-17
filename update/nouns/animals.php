@@ -9,11 +9,11 @@
         <?php include ('../includes/meta.php'); ?>
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="../flip.css">
-        
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
         <script src="../js/nouns.js"></script>
-        <script src="../js/nouns-functions.js"></script>        
-        
+        <script src="../js/nouns-functions.js"></script> 
+    
     </head>
 
 <body>
@@ -22,11 +22,11 @@
 
     <main>
         
-        <header><a href="/">Let's Learn German Together</a></header>
+        <header>Let's Learn German Together</header>
         
         <section>
             
-            <h1 class="subhed">Nouns - Food</h1>
+            <h1 class="subhed">Nouns - Animals</h1>
             
             <div class="review_space">
             
@@ -100,7 +100,8 @@
 
     <footer>
         <?php include ('../includes/footer.php'); ?>
-    </footer>    
+    </footer>
+       
     
 </body>
 

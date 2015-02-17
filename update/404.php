@@ -17,17 +17,12 @@
 
     <main>
         
-        <header><a href="">Let's Learn German Together</a></header>
+        <header>Let's Learn German Together</header>
         
         <section class="homepage_section">
-            <p>Learn German the fun way with these interactive quizzes.</p>
+            <h1>Achtung!</h1>
+            <p>You've attempted to reach a page that doesn't exist. Das ist verboten!</p>
             <figure><img src="imgs/homepage.jpg" alt="Berlin"/></figure>
-            <nav>
-                <ul>
-                    <li><a href="nouns.php">Nouns</a></li>
-                <li style="color:lightgrey">Verbs</li>    
-                </ul>
-            </nav>
         </section>
     
     </main>

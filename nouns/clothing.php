@@ -1,182 +1,107 @@
 <!DOCTYPE html>
 
-
 <html>
 
-	<head>
-	
-		<title>Let's Learn German Together - Clothing</title>
-	
-		<link rel="stylesheet" type="text/css" href="../styles.css">
-		
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-		<?php include ('../includes/meta.php'); ?>
+    <head>
+    
+        <title>Let's Learn German Together</title>
+        <?php include ('../includes/meta.php'); ?>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../flip.css">
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
+        <script src="../js/nouns.js"></script>
+        <script src="../js/nouns-functions.js"></script>        
+        
+    </head>
 
-		
-		<script src="../js/nouns.js"></script>
-		<script src="../js/nouns-functions.js"></script>		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<body>
+    
+     <?php include_once("../includes/analyticstracking.php") ?>
 
-		<script>
+    <main>
+        
+        <header><a href="/">Let's Learn German Together</a></header>
+        
+        <section>
+            
+            <h1 class="subhed">Nouns - Clothing</h1>
+            
+            <div class="review_space">
+            
+                <p>Hover over/swipe each card for the translation:</p>
 
-		// Let's create our array
 
-		var test_nouns = new Array();
+                <div class="flip-container card0" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                      <div class="front">
+                      <h2></h2>
+                      </div>
+                      <div class="back">
+                      <h2></h2>
+                      </div>
+                   </div>
+                </div>
 
-		// and dump our nouns into the array
+                <div class="flip-container card1" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                      <div class="front">
+                      <h2></h2>
+                      </div>
+                      <div class="back">
+                      <h2></h2>
+                      </div>
+                   </div>
+                </div>
 
-		for (var i in data.nouns) {
+                <div class="flip-container card2" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                      <div class="front">
+                      <h2></h2>
+                      </div>
+                      <div class="back">
+                      <h2></h2>
+                      </div>
+                   </div>
+                </div>  
 
-			if (data.nouns[i].category == "clothing") {
+                <input type="submit" id="test_button" value="Test Your Knowledge" onclick="takeTest();"/>
+                
+            </div>
+            
+            <div class="test_block">
+                
+                <p>Translate the following:</p>
+            
+                    <div class="question_block">
+                        <input type="text" name="answer0" list="pronouns"/>
+                    </div>
+                    <div class="question_block">
+                        <input type="text" name="answer1" list="pronouns"/>
+                    </div>
+                    <div class="question_block">
+                        <input type="text" name="answer2" list="pronouns"/>
+                    </div>
+                    <datalist id="pronouns">
 
-			test_nouns[i] = data.nouns[i];	
+                    </datalist>
 
-			}
+                <input type="submit" id="submit_ans_button" value="Submit Answers" onclick="submitAnswers()"/>                
+            </div>
 
-		}
+            <div class="answer_block">
+                <div class="correct_answers"><p></p></div>
+                <input type="submit" value="Try Again" onclick="location.reload(true);"/>               </div>
+            
+        </section>
+    
+    </main>
 
-		// Let's scramble the array so the user doesn't get the same experience twice
+    <footer>
+        <?php include ('../includes/footer.php'); ?>
+    </footer>
+    
+</body>
 
-		test_nouns.sort(function() {return 0.75 - Math.random()});
-
-		// Let's set a variable for cycling through the images in review_me function
-
-		var x = 0;
-
-		// Let's count the number of correct answers
-
-		var correct_answers = 0;
-
-		// Let's speed up the process of loading everything by doing it with jQuery
-
-		$(document).ready(function(){
-
-		review_nouns();
-
-		});
-
-		</script>
-		
-	</head>
-	
-	<body>
-	<?php include_once("../includes/analyticstracking.php") ?>		
-
-		
-		<div class="app_window">
-	
-			<p class="app_title"><a href="../index.php">Let's Learn German Together!</a></p>
-			
-			<p class="sec_title">Nouns - Clothing</p>
-			
-				<div id="img_space">
-					
-					<p><strong>Step 1</strong>: Review the noun genders by looking at the images below.
-						<br/>
-						<dfn>Der = masculine, Das = neuter, Die = feminine/plural</dfn>
-					</p>
-						
-					<p id="count"></p>
-					
-					<p class="image">
-						
-						<img id="noun_image" src=""/> 
-						<img id="next_image" src="" style="display:none;"/>
-						
-						<br/>
-					
-						<span id="noun_name"></span>
-						
-						<br/>		
-					
-						<span id="noun_translation"></span>
-					
-					</p>
-
-					<iframe id="audio_link" src=""></iframe>		
-				
-				    <br/>
-				
-					<button class="button" onclick="review_nouns()">Next</button>
-					
-					<p>&nbsp;</p>
-					<p><strong>Step 2</strong>: <button class="button" onclick="take_test();">Take the Test</button></p>
-					
-				</div>
-				
-				<div id="test_space">
-					
-					<div class="question_side">
-						
-
-						
-						<div class="q_content">
-
-							<div class="question">1.&nbsp;
-								<select id="answer_one">
-									<option value="Der">Der</option>
-									<option value="Die">Die</option>
-									<option value="Das">Das</option>
-								</select>
-							</div>
-
-							<div class="question">2.&nbsp;
-								<select id="answer_two">
-									<option value="Der">Der</option>
-									<option value="Die">Die</option>
-									<option value="Das">Das</option>
-								</select>
-							</div>
-							
-							<div class="question">3.&nbsp;
-								<select id="answer_three">
-									<option value="Der">Der</option>
-									<option value="Die">Die</option>
-									<option value="Das">Das</option>
-								</select>
-							</div>
-							
-						</div>
-					
-					</div>
-					
-					<div class="answer_side">
-					
-						<div class="a_content">
-
-								<div class="answer">
-									<p id="question_one"></p>
-								</div>
-							
-								<div class="answer">
-									<p id="question_two"></p>
-								</div>
-							
-								<div class="answer">
-									<p id="question_three"></p>
-								</div>
-						
-						</div>
-										
-
-					</div>
-					
-					<p>&nbsp;</p>
-					<button class="button" id="score_button" onclick="check_answers();">Check</button>
-					<p id="stars"></p>
-					<p id="score"></p>
-					<p id="replay"><a href="">Try Again</a> | <a href="../index.php">Home</a></p>
-				
-				</div>
-			
-			</div>
-			
-			<?php include ('../includes/footer.php'); ?>
-
-					
-	</body>
-	
 </html>
-	
-	
