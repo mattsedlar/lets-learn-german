@@ -1,6 +1,11 @@
-String.prototype.topicAt = function() { return this.substring(this.indexOf("nouns/") + 6, this.length - 4); };      
+String.prototype.topicAt = function(t) {
+    var subject;
+    if(t.indexOf('nouns') > 0) { subject = "nouns/"; }
+    else if(t.indexOf('verbs') > 0) { subject = "verbs/"; }
+    return this.substring(this.indexOf(subject) + 6, this.length - 4); 
+};      
 
-Array.prototype.checkAnswers = function (inputArray) {
+Array.prototype.checkAnswers = function(inputArray) {
   var correctAnswers = [];    
   for (var i = 0, l = this.length; i < l; i++) {
       var safename = test_nouns[i].name;
@@ -12,8 +17,11 @@ Array.prototype.checkAnswers = function (inputArray) {
   return correctAnswers.length;
 };
 
-var topic = document.URL.topicAt(),
-    test_nouns = nouns[topic];
+var url = document.URL;
+
+topic = url.topicAt(url);
+
+var test_nouns = nouns[topic];
 
 test_nouns.sort(function() {return 0.75 - Math.random()});
 test_nouns = test_nouns.slice(0,3);

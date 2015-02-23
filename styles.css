@@ -82,13 +82,13 @@ footer {
 
 header, h1, h2, h3 {
     font-family: 'Kreon', serif;
+    line-height: 1.06666666667em;    
 }
 
 header {
     
     font-weight: 700;
     font-size: 4.5em;
-    line-height: 48px;
     padding: 1.171875%; /* 12 / 1024 */
     margin: 1.171875%; /* 12 / 1024 */
     box-sizing: border-box;
@@ -103,7 +103,10 @@ header a, header a:hover, header a:visited {
 
 h1 { font-size: 3.3em; }
 h2 { font-size: 2.5em; }
-h3 { font-size: 1.8em; }
+h3 { 
+    font-size: 1.8em;
+    line-height: 2.0em;
+}
 
 .subhed { margin: 12px 0 24px 0; }
 
@@ -112,7 +115,7 @@ h3 { font-size: 1.8em; }
 p { 
     font-family: inherit;
     font-size: 1.4em;
-    line-height: 18px;
+    line-height: 1.28571428571em;
     margin: 12px 6px;
     padding: 12px;
 }
@@ -166,7 +169,7 @@ nav { margin: 24px; }
 
 nav ul li {
     font-size: 2.5em;
-    line-height: 30px;
+    line-height: 1.2em;
     display:inline;
     padding: 12px 0;
 }
@@ -187,6 +190,26 @@ nav ul li:last-child:after { content: ""; }
     margin: 0 auto;
 }
 
+#pronouns {
+    text-align: center;
+    width: 295px;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+#pleft, #pright {
+    width: 50%;
+}
+
+#pleft { 
+    float: left;
+    text-align: left;
+}
+#pright { 
+    float: right;
+    text-align: right;
+}
+
 .question_block { 
     display: block; 
     margin: 24px 0;
@@ -205,7 +228,7 @@ input[name='answer0'], input[name='answer1'], input[name='answer2'] {
 
 .correct_answers p {
     font-size: 2.5em;
-    line-height: 30px;
+    line-height: 1.2em;
 }
 
 /* CLEARFIX */
